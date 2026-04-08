@@ -1,0 +1,31 @@
+#old process description
+
+in collect_images.py
+
+we are creating dataset ourselves and annotating
+different gestures , broadly 3 categories
+that we will later use to represent different
+letters
+
+
+Now that we have images , we will use this approach :
+Crop to the hand gesture , and train on it instead of image classification
+
+Make landmarks using mediapipe hands
+
+represented each image into 3-dimensional landmarks , and added
+them to an array
+each image has 21 landmarks so 21 x 3 dimens = 63 describing an image
+
+saved this in data.pickle
+
+using RandomForestClassifer currently to train the model
+
+saved the model using pickle
+
+Now for testing
+imported the created model using pickle
+took functions of hand landmarks from create_dataset.py (draw and append )
+predicted data_aux value using model
+boxed the hand using cv2.rectangle
+box's corners found using min and max landmark values
