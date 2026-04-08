@@ -141,15 +141,15 @@ python inference_classifier.py
 
 ### A
 
-![A](./A.png)
+![A](./images/A.png)
 
 ### B
 
-![B](./B.png)
+![B](./images/B.png)
 
 ### L
 
-![L](./L.png)
+![L](./images/L.png)
 
 ---
 
